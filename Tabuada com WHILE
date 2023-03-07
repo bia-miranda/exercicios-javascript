@@ -6,31 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabuada</title>
-    <link rel="shortcut icon" href="https://play-lh.googleusercontent.com/px-tMoFB_edeU5wu5k5AHJuY72eQp7Y9EYWJMGg8KnJNJYW4zpZJmf8MNOg2aE5a-1U" type="image/x-icon">
-    <script language="JavaScript">
+    <link rel="shortcut icon"
+        href="https://play-lh.googleusercontent.com/px-tMoFB_edeU5wu5k5AHJuY72eQp7Y9EYWJMGg8KnJNJYW4zpZJmf8MNOg2aE5a-1U"
+        type="image/x-icon">
     <script language="JavaScript">
         function mostrar() {
-            var n1, n2, resu;
-            var n1 = parseInt(document.getElementById("numero").value);
+            var n1 = document.getElementById("numero").value;
             var n2 = 1;
             var resu = 0;
+            var texto = "";
 
             if (isNaN(n1)) {
                 alert("Zé, só números!");
+                document.getElementById("numero").value = "";
+                document.getElementById("numero").focus();
             }
-
-            while (n2 <= 10) {
-                resu = n1 * n2;
-                alert(n1 + "x" + n2 + "=" + resu + "\n");
-                n2++;
+            else {
+                while (n2 <= 10) {
+                    resu = n1 * n2;
+                    texto = texto + n1 + "x" + n2 + "=" + resu + "\n";
+                    n2++;
+                }
+                alert(texto);
             }
-
         }
-
-
-
-
     </script>
+
     <style>
         * {
             font-family: arial;
@@ -99,9 +100,9 @@
     <h1>TABUADA</h1>
     <hr>
     <form>
-            <label>Digite a tabuada que quer:</label>
-            <input type="text" id="numero" class="texto">
-    
+        <label>Digite a tabuada que quer:</label>
+        <input type="text" id="numero" class="texto">
+
         <div class="botoes">
             <input type="button" value="VER TABUADA" onclick="mostrar()" class="botao" />
             <input type="reset" value="APAGAR" class="botao" />
