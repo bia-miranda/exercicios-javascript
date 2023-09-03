@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-weight: bold;
+    padding: 0.5rem 0 1rem;
+    text-align: center;
+    color: rgb(32, 131, 224);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    padding-top: 20vh;
+}
+
+fieldset{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    max-width: 700px;
+    flex-direction: column;
+    padding: 1.5rem;
+    background-color: rgba(238, 238, 238, 0.719);
+    margin: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 2px 20px rgba(44, 44, 44, 0.493);
+}
+
+input, button{
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: none;
+}
+
+button{
+    background-color: rgb(32, 131, 224);
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+
+label{
+    font-weight: bold;
+    color: rgb(32, 131, 224);
+}
